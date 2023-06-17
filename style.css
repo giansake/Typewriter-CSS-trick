@@ -63,3 +63,23 @@ p::before {
   display: inline-block;
   padding-right: 5px;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+  column-gap: 15px;
+  font-size: 2rem;
+  background-color: white;
+
+  padding: 10px 10px 10px 10px;
+
+  transition: all 0.3s;
+}
+
+ul:hover > li {
+  filter: blur(12px);
+}
+
+ul > li:hover {
+  filter: blur(0px);
+}
