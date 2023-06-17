@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+}
+
+p {
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  width: fit-content;
+}
+
+p::after {
+  content: "developer";
+  display: inline-block;
+  width: 0ch;
+  color: lightseagreen;
+
+  animation: word 6.5s steps(9) infinite;
+}
+
+p::before {
+  display: inline-block;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  animation: blinking 0.4s linear alternate infinite;
+}
+
+@keyframes word {
+  25% {
+    content: "developer";
+    width: 8.5ch;
+  }
+  40% {
+    width: 0ch;
+  }
+  75% {
+    content: "designer";
+    width: 7.5ch;
+  }
+  90% {
+    width: 0ch;
+  }
+}
+
+@keyframes blinking {
+  100% {
+    opacity: 0;
+  }
+}
